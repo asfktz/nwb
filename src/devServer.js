@@ -46,8 +46,8 @@ export default function server(webpackConfig, {fallback, noInfo, port, staticPat
     })
   }
 
-  app.listen(port, 'localhost', err => {
+  app.listen(port, '0.0.0.0', err => {
     if (err) return cb(err)
-    console.log(chalk.green(`nwb: dev server listening at http://localhost:${port}`))
+    console.log(chalk.green(`nwb: dev server listening at http://0.0.0.0:${port}`))
   })
 }
